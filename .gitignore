@@ -1,0 +1,5 @@
+/.*
+!.gitignore
+*.translation
+export_presets.cfg
+

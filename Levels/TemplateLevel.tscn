@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Tiles/Tiles.tres" type="TileSet" id=1]
+[ext_resource path="res://Characters/Player.tscn" type="PackedScene" id=2]
+
+[node name="TemplateLevel" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+collision_layer = 2147483650
+collision_mask = 5
+format = 1
+tile_data = PoolIntArray( -65538, 1, 0, -65537, 1, 2, -131072, 1, 2, -131071, 1, 1, -2, 1, 65538, -1, 2, 0, -65536, 2, 0, -65535, 1, 65538, 65534, 1, 65538, 65535, 2, 0, 0, 2, 0, 1, 1, 65538, 131070, 1, 65536, 131071, 1, 2, 65536, 1, 2, 65537, 1, 65537 )
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color( 0.294118, 0.294118, 0.294118, 1 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+current = true
+
+[node name="Cameras" type="Node" parent="."]
+
+[node name="Guards" type="Node" parent="."]
